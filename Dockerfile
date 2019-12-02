@@ -18,7 +18,7 @@ COPY --chown=projects:projects ./pom.xml .
 
 RUN ["mvn", "clean"]
 
-RUN ["mvn", "de.qaware.maven:go-offline-maven-plugin:resolve-dependencies", "-P", "integration"]
+RUN ["mvn", "de.qaware.maven:go-offline-maven-plugin:resolve-dependencies"]
 
 COPY --chown=projects:projects . .
 
